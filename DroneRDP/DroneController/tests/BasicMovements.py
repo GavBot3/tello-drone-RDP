@@ -7,6 +7,12 @@ from djitellopy import tello
 from time import sleep
 
 # Connect to the drone
-me = tello.Tello()
-me.connect()
-print(me.get_battery())
+tello = tello.Tello()
+tello.connect()
+print(tello.get_battery())
+
+
+tello.takeoff()
+tello.send_rc_control(0,50,0,0)
+sleep(3)
+tello.land()
