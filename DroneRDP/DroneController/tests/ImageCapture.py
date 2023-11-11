@@ -12,7 +12,6 @@ tello = tello.Tello()
 tello.connect()
 print(tello.get_battery())
 
-
 tello.streamon()
 
 while True:
